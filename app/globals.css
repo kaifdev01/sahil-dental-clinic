@@ -142,15 +142,31 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 8px;
+  gap: 6px;
   background: #1a1c19;
   color: #d9dbd5;
-  font-size: 12px;
+  font-size: 11px;
   font-family: inherit;
-  padding: 9px 16px;
+  padding: 7px 12px;
   text-align: center;
+  line-height: 1.4;
   border-bottom: 1px solid #2e3029;
   pointer-events: auto;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.demo-banner-full { display: none; }
+.demo-banner-short { display: inline; }
+
+@media (min-width: 640px) {
+  .demo-banner {
+    font-size: 12px;
+    padding: 9px 16px;
+    white-space: normal;
+  }
+  .demo-banner-full  { display: inline; }
+  .demo-banner-short { display: none; }
 }
 
 .demo-banner strong {
@@ -188,6 +204,10 @@ body {
   border-radius: 6px;
   border: 1px solid #3e4039;
   pointer-events: none;
+}
+
+@media (min-width: 1024px) {
+  .demo-badge { bottom: 24px; }
 }
 
 @keyframes demo-pulse {
