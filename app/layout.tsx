@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import './globals.css'
 import { Preloader } from '@/components/Preloader'
+import { DemoOverlay } from '@/components/DemoOverlay'
 
 export const metadata: Metadata = {
   title: "Dr. Sahil's Dental Care | Dentist in Sabzazar, Lahore",
@@ -48,7 +49,8 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
         <meta name="geo.position" content="31.527887;74.2650214" />
         <meta name="ICBM" content="31.527887, 74.2650214" />
       </head>
-      <body>
+      <body className="pt-[38px]">
+        <DemoOverlay />
         <Preloader />
         {children}
       </body>
